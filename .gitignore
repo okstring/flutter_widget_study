@@ -101,3 +101,6 @@ GoogleService-Info.plist
 .history
 .svn/
 migrate_working_dir/
+
+# FVM Version Cache
+.fvm/
