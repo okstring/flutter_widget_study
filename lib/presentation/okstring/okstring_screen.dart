@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget_study/presentation/okstring/week1/side_bar_inherited.dart';
+import 'package:flutter_widget_study/presentation/okstring/week1/practice_app.dart';
 
 class OkstringScreen extends StatefulWidget {
-  const OkstringScreen({super.key});
+  final _sidebarNotifier = SidebarNotifier();
+
+  OkstringScreen({super.key});
 
   @override
   State<OkstringScreen> createState() => _OkstringScreenState();
@@ -10,6 +14,9 @@ class OkstringScreen extends StatefulWidget {
 class _OkstringScreenState extends State<OkstringScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SafeArea(child: Center(child: Text('okstring'))));
+    return SidebarState(
+      notifier: widget._sidebarNotifier,
+      child: PracticeApp(),
+    );
   }
 }
